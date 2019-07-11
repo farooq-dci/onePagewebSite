@@ -1,0 +1,644 @@
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+@import "__spacing.css";
+
+/* Using Tachyons spacing */
+* {
+  scroll-behavior: smooth;
+
+}
+
+html,
+body {
+  color: #222;
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
+  margin: 0;
+  height: 100%;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+    * Remove the gap between audio, canvas, iframes,
+    * images, videos and the bottom of their containers:
+    *
+    */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+#complete-main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+main {
+  flex: 1;
+  overflow: auto;
+}
+
+/* The hero image */
+.hero-image {
+  margin: 0 0;
+  background-image: url("../img/hero-beach.jpg");
+  min-height: 900px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  left: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  max-width: 100%;
+  height: 81px;
+  left: 0px;
+  top: 0px;
+
+}
+
+.header__logo {
+  position: absolute;
+  height: 32px;
+  left: 121px;
+  top: 22px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 64px;
+  margin-left: 121px;
+  margin-right: 121px;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.footer__items a {
+  font-weight: 500;
+  color: #222;
+  text-decoration: none;
+}
+
+/* ==========================================================================
+     Add your CSS here
+      ========================================================================== */
+/* body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}  */
+
+/* Hero Section --start-- */
+.highlight-text-div {
+  position: absolute;
+  width: 500px;
+  left: 271px;
+  top: 375px;
+  display: flex;
+}
+
+.highlight-text {
+  font-weight: bolder;
+  font-size: 48px;
+  line-height: 56px;
+  display: flex;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+}
+
+.highlight-text>div>span {
+  background-color: #fff;
+  padding-left: 18px;
+}
+
+/* Hero Section --end-- */
+
+/* Hamburger Menu --start-- */
+
+.hamburger-menu {
+  position: absolute;
+  right: 121px;
+  top: 22px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.toggleican:hover {
+  color: #42abbe;
+}
+
+.hamburger-items {
+  display: none;
+  right: 25px;
+  top: 50px;
+  width: 320px;
+  position: absolute;
+  z-index: 5;
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul :hover {
+  color: #f38017;
+  cursor: pointer;
+  transform: scale(1.1);
+  scroll-behavior: smooth;
+}
+
+/* Hamburger Menu --end-- */
+
+/* what-we-fund-container --start-- */
+#what-we-fund {
+  min-height: 450px;
+  margin-left: 121px;
+  margin-right: 121px;
+  border-bottom: 3px solid black;
+  margin-bottom: 90px;
+}
+
+.what-we-fund-box-section-title {
+  grid-area: title;
+}
+
+.what-we-fund-box-text-box-container {
+  position: relative;
+}
+
+.what-we-fund-box-text-box-title {
+  top: 100px;
+  left: 26px;
+  position: inherit;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.what-we-fund-box-container-button {
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+}
+
+.hoverc:hover {
+  background-color: #F2C94C;
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+}
+
+.hoverd:hover {
+  background-color: #83AFED;
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+}
+
+.what-we-fund-box-container-button h2 {
+  color: white;
+  margin-left: 26px;
+}
+
+.what-we-fund-box-container-item-1 {
+  grid-area: textbox-1;
+}
+
+.what-we-fund-box-container-item-1>div:nth-child(1) {
+  background-color: #F2C94C;
+  height: 216px;
+
+}
+
+.what-we-fund-box-container-item-2 {
+  grid-area: textbox-2;
+}
+
+.what-we-fund-box-container-item-2>div:nth-child(1) {
+  background-color: #83AFED;
+  height: 216px;
+
+}
+
+.what-we-fund-box-container {
+  display: grid;
+  grid-auto-columns: 1fr;
+  width: 100%;
+  grid-gap: 21px;
+  grid-template-areas:
+    'title title'
+    'textbox-1 textbox-2';
+}
+
+/* what-we-fund-container --end-- */
+
+/* our-mission --start-- */
+
+#our-mission {
+  min-height: 800px;
+  margin-left: 121px;
+  margin-right: 121px;
+  border-bottom: 3px solid black;
+  margin-bottom: 10px;
+  margin-bottom: 90px;
+}
+
+.our-mission-section-title {
+  grid-area: title;
+  width: 100%;
+}
+
+.our-mission-container-item-1 {
+  grid-area: textbox-1;
+  max-width: 100%;
+  font-size: 24px;
+  letter-spacing: 0.03em;
+}
+
+.our-mission-container-item-2 {
+  grid-area: textbox-2;
+}
+
+.our-mission-container {
+  display: grid;
+  grid-auto-columns: 1fr;
+  width: 100%;
+  grid-gap: 21px;
+  grid-template-areas:
+    'title textbox-2'
+    'textbox-1 textbox-2';
+}
+
+.our-mission-text-box-container {
+  position: relative;
+  top: 16px;
+  margin-bottom: 4rem;
+}
+
+.our-mission-text-box-container>img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.our-mission-text-box-container-1>p {
+  position: relative;
+  bottom: 50px;
+  ;
+}
+
+/* our-mission --end-- */
+
+/* communities --start-- */
+h1 {
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.dark-caption-text {
+  margin-left: 21px;
+  margin-top: 21px;
+  font-size: 1rem;
+  line-height: 21px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #4F4F4F
+}
+
+#communities {
+  min-height: 1000px;
+  margin-left: 121px;
+  margin-right: 121px;
+  border-bottom: 3px solid black;
+}
+
+.communities-section-title {
+  grid-area: title;
+}
+
+.communities-container-item-1 {
+  grid-area: textbox-1;
+}
+
+.communities-container-button {
+  background-color: black;
+  width: 225px;
+  padding: 5px;
+  margin-bottom: 100px;
+}
+
+.communities-container-button {
+  color: white;
+  margin-left: 26px;
+}
+
+.learn-more-button {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  font-weight: bold;
+  color: white;
+  margin-left: 26px;
+}
+
+.communities-container-item-2 {
+  position: relative;
+  grid-area: textbox-2;
+  height: 500px;
+  width: 100%;
+  background-color: #F2C94C;
+}
+
+.communities-container-item-2 img {
+  position: absolute;
+  height: 350px;
+  left: 0;
+  bottom: 0;
+
+}
+
+.communities-container-item-3 {
+  position: relative;
+  grid-area: textbox-3;
+  height: 500px;
+  width: 100%;
+  background-color: #F2C94C;
+}
+
+.communities-container-item-3 img {
+  position: absolute;
+  height: 350px;
+  left: 0;
+  bottom: 0;
+}
+
+.communities-container-item-4 {
+  grid-area: textbox-4;
+  height: 500px;
+  width: 100%;
+  background-color: #F2C94C;
+}
+
+.communities-container {
+  display: grid;
+  grid-auto-columns: 1fr;
+  min-width: 100%;
+  grid-gap: 21px;
+  grid-template-areas:
+    'title title title'
+    'textbox-1 textbox-1 textbox-1'
+    'textbox-2 textbox-3 textbox-4';
+}
+
+.communities-text-box-container-2 img {
+  /* object-fit: cover; */
+  max-height: 55%;
+  width: 100%;
+}
+
+.communities-text-box-container-2 h3 {
+  margin-left: 21px;
+}
+
+.communities-text-box-container-1>p {
+  grid-area: textbox-1;
+  width: 100%;
+  font-size: 24px;
+  letter-spacing: 0.03em;
+}
+
+.blacksmall-point {
+  display: block;
+  font-size: 1.5em;
+  position: relative;
+  left: 30px;
+  margin-block-start: 0.80em;
+  font-weight: bold;
+  color: white;
+}
+
+/* communities --end-- */
+
+/* technologies --start-- */
+
+#technologies {
+  min-height: 1000px;
+  margin-left: 121px;
+  margin-right: 121px;
+  margin-bottom: 21px;
+  border-bottom: 3px solid black;
+}
+
+.technologies-section-title {
+  grid-area: title;
+}
+
+.technologies-container-item-1 {
+  grid-area: textbox-1;
+}
+
+.technologies-container-button {
+  background-color: black;
+  width: 225px;
+  padding: 5px;
+  margin-bottom: 100px;
+}
+
+.technologies-container-button h2 {
+  color: white;
+  margin-left: 26px;
+}
+
+.technologies-container-item-2 {
+  grid-area: textbox-2;
+  position: relative;
+  height: 500px;
+  width: 100%;
+  background-color: #83AFED;
+}
+
+.technologies-container-item-2 img {
+  position: absolute;
+  height: 350px;
+  left: 0;
+  bottom: 0;
+}
+
+.technologies-container-item-3 {
+  grid-area: textbox-3;
+  height: 500px;
+  width: 100%;
+  background-color: #83AFED;
+}
+
+.technologies-container-item-4 {
+  grid-area: textbox-4;
+  position: relative;
+  height: 500px;
+  width: 100%;
+  background-color: #83AFED;
+}
+
+.technologies-container-item-4 img {
+  position: absolute;
+  height: 350px;
+  left: 0;
+  bottom: 0;
+}
+
+.tbox-hover:hover {
+  background-color: #f7c035d5;
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+}
+
+.technologies-container {
+  display: grid;
+  grid-auto-columns: 1fr;
+  width: 100%;
+  grid-gap: 21px;
+  grid-template-areas:
+    'title title title'
+    'textbox-1 textbox-1 textbox-1'
+    'textbox-2 textbox-3 textbox-4';
+}
+
+.technologies-text-box-container-2 img {
+  /* object-fit: cover; */
+  width: 100%;
+  max-height: 55%;
+
+}
+
+.technologies-text-box-container-2 h3 {
+  margin-left: 21px;
+}
+
+.technologies-text-box-container-1>p {
+  grid-area: textbox-1;
+  width: 100%;
+  font-size: 24px;
+  letter-spacing: 0.03em;
+}
+
+/* technologies --end-- */
+
+.facebook {
+  color: #4266b2;
+}
+
+.twitter {
+  color: #42a1f2;
+}
+
+.instagram {
+  color: rgba(155, 79, 9, 0.897)
+}
+
+.youtube {
+  color: #EC211E;
+}
+
+nav :hover {
+  color: #83AFED;
+}
+
+
+/* start back to top  */
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 3px;
+  right: 30px;
+  z-index: 99;
+  font-size: 25px;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  scroll-behavior: smooth;
+  transform: scale()
+}
+
+.backto-top:hover {
+  color: black;
+}
+
+/* end of back to top mu */
+
+/* ========================================================================== ========================================================================== */
+
+
+
+/*
+    * Clearfix: contain floats
+    *
+    * For modern browsers
+    * 1. The space content is one way to avoid an Opera bug when the
+    *    `contenteditable` attribute is included anywhere else in the document.
+    *    Otherwise it causes space to appear at the top and bottom of elements
+    *    that receive the `clearfix` class.
+    * 2. The use of `table` rather than `block` is only necessary if using
+    *    `:before` to contain the top-margins of child elements.
+    */
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
